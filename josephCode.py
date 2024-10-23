@@ -10,6 +10,8 @@ nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
 #Python package for parsing HTML documents. 
 
+#test
+
 ostomy_one_url = 'https://www.amazon.com/Drainable-Supplies-Colostomy-Ileostomy-Approved/dp/B07RQT41YX/ref=cm_cr_arp_d_product_top?ie=UTF8'
 
 skincare_one_url = 'https://www.amazon.com/CeraVe-Moisturizing-Cream-Daily-Moisturizer/dp/B00TTD9BRC/ref=sr_1_4?crid=2S8U53U0FJQR7&dib=eyJ2IjoiMSJ9.j7IYE0WXjFEUyEP4FpoxoOXFyqkaJhThqrg0mDmYTJ22fmvp0io745l1mO1zPR0Suh2a53XqjG-1m-xV2tOKAojZ4zMS6yQo-0kBaVBaEHR3ifHVK8-G3a5PJnBdDpqhSgexU8L4U6_o0Ce-Fu7GlLgnsk-x6Px_s9m3UOKtRFraqZn_XQMl2bdG-K7Q6HzzJsgrnAKDtYD7CDxxTi-5Z7kDXUzEi7Spa3tHwfGb7BOJFzNQSZ1iVCxpRPgkouOkm-FnkGTExiFQP5A-OUFtOIr-NoOpiiy4um-xKAkPIwo.sV9X7pmBx4xpFCzr0pLnO1cJt0qHPX06NWLLUS-Ycag&dib_tag=se&keywords=cerave&s=hpc&sprefix=cerave%2Chpc%2C134&sr=1-4'

@@ -10,7 +10,7 @@ nltk.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
 #Python package for parsing HTML documents. 
 
-#test
+#testing
 
 ostomy_one_url = 'https://www.amazon.com/Drainable-Supplies-Colostomy-Ileostomy-Approved/dp/B07RQT41YX/ref=cm_cr_arp_d_product_top?ie=UTF8'
 

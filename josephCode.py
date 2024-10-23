@@ -103,7 +103,7 @@ df_ostomy.loc[df_ostomy.compound>0.05,'sentiment']='positive'
 df_ostomy.loc[df_ostomy.compound<-0.05,'sentiment']='negative'
 df_ostomy.head()
 
-print(df_ostomy['sentiment'].value_counts()['neutral'])
+
 print(df_ostomy['sentiment'].value_counts()['positive'])
 print(df_ostomy['sentiment'].value_counts()['negative'])
 

@@ -267,22 +267,43 @@ custom_headers = {
 # Initialize lists to store results
 all_reviews = []
 all_titles = []
+all_stars = []
+all_usernames = []
+all_timestamps = []
 
 for url in urls:
     response = requests.get(url, headers=custom_headers)
+    print(response.status_code)
     soup = BeautifulSoup(response.content, "html.parser")
 
     reviews_element = soup.find_all('div', class_='a-expander-content reviewText review-text-content a-expander-partial-collapse-content')
     title_element = soup.find('span', id='productTitle')
+    stars_element = soup.find_all('span', class_ = 'a-icon-alt')
+    users_element = soup.find_all('span', class_ = 'a-profile-name')
+    timestamp_element = soup.find_all('span', class_ ='a-size-base a-color-secondary review-date')
 
     # Extract title
     if title_element:
         title_text = title_element.text.strip()
         all_titles.append(title_text)
 
+    #Extract Stars
+    stars_text = [span.text.strip() for span in stars_element]
+    all_stars.extend(stars_text)
+
     # Extract reviews
     reviews_text = [span.text.strip() for span in reviews_element]
     all_reviews.extend(reviews_text)
+
+    #Extract Usernames
+    users_text = [span.text.strip() for span in users_element]
+    all_usernames.extend(users_text)
+
+    #Extract timestamps
+    timestamps_text = [span.text.strip() for span in timestamp_element]
+    all_timestamps.extend(timestamps_text)
+
+
 
 # Generate the word cloud from all reviews
 cloud_all_reviews = " ".join(all_reviews)
